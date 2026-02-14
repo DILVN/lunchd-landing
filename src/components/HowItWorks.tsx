@@ -207,7 +207,7 @@ export default function HowItWorks() {
                 className="relative w-full aspect-[4/3] bg-card-bg rounded-[2rem] border border-card-border overflow-hidden flex items-center justify-center p-6 transition-all duration-300 group-hover:shadow-lg group-hover:border-[#d6d3cb]"
                 viewport={{ margin: "-30%" }}
                 onViewportEnter={(entry) => {
-                  if (i === 2) {
+                  if (i === 2 && entry) {
                     entry.target.classList.add("in-view");
                   }
                 }}
