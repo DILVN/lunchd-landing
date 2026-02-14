@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
         {/* Top row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <Logo className="w-40 md:w-48" />
+          <Logo className="w-48 md:w-56 lg:w-64" />
           <div className="flex items-center gap-8 text-sm font-medium">
             <a
               href="https://www.instagram.com/lunchdapp/"
@@ -46,9 +46,8 @@ export default function Footer() {
         <div className="h-px bg-white/10" />
 
         {/* Bottom row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
-          <span>Lunchd &copy; 2026</span>
-          <span>Made in London.</span>
+        <div className="flex items-center justify-center text-sm text-white/50">
+          <span>&copy; 2025, Lunchd by APT53. All rights reserved.</span>
         </div>
       </div>
     </motion.footer>

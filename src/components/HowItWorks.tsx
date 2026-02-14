@@ -99,8 +99,8 @@ function JoinTableCard() {
         className="w-full py-2.5 text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 group-hover:bg-brand"
         initial={{ backgroundColor: "#2D2D2D" }}
         whileInView={{ backgroundColor: "#E84908" }}
-        viewport={{ once: true, margin: "-20%" }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
       >
         <span>Join Table</span>
         <svg
@@ -219,8 +219,8 @@ export default function HowItWorks() {
                       className="absolute top-10 right-10 text-brand"
                       initial={{ opacity: 0, y: 4 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ margin: "-30%", once: true }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
                     >
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z" />
@@ -230,8 +230,8 @@ export default function HowItWorks() {
                       className="absolute bottom-10 left-10 text-yellow-400"
                       initial={{ opacity: 0, y: -4 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ margin: "-30%", once: true }}
-                      transition={{ duration: 0.5, delay: 0.6 }}
+                      viewport={{ once: true, amount: 0.3 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
                     >
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z" />
