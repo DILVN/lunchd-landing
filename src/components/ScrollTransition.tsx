@@ -28,16 +28,16 @@ export default function ScrollTransition() {
   });
 
   // Adjust transition timing based on screen size
-  // Mobile: transition happens earlier (0.3-0.45) for shorter scroll distance
-  // Desktop: transition happens later (0.4-0.6) for more dramatic effect
+  // Mobile: transition happens earlier (0.25-0.4) for shorter scroll distance
+  // Desktop: transition happens earlier (0.35-0.45) for more dramatic effect
   const firstOpacity = useTransform(
     smoothProgress,
-    isMobile ? [0, 0.3, 0.45] : [0, 0.4, 0.5],
+    isMobile ? [0, 0.25, 0.4] : [0, 0.35, 0.45],
     [1, 1, 0]
   );
   const secondOpacity = useTransform(
     smoothProgress,
-    isMobile ? [0.45, 0.55, 1] : [0.5, 0.6, 1],
+    isMobile ? [0.4, 0.5, 1] : [0.45, 0.55, 1],
     [0, 1, 1]
   );
 

@@ -45,23 +45,25 @@ function FAQItem({
   question,
   answer,
   index,
+  isOpen,
+  onToggle,
 }: {
   question: string;
   answer: string;
   index: number;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <motion.div
-      className="bg-white rounded-2xl overflow-hidden"
+      className="bg-white rounded-2xl overflow-hidden border border-gray-200"
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.06 }}
     >
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onToggle}
         className="w-full flex items-center justify-between px-6 py-5 md:px-8 md:py-6 text-center cursor-pointer"
       >
         <span className="font-medium text-base md:text-lg text-espresso flex-1 text-center">
@@ -95,6 +97,8 @@ function FAQItem({
 }
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <section className="bg-cream min-h-screen flex items-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-20 md:py-28">
       <div className="max-w-3xl mx-auto w-full flex flex-col gap-10 items-center">
@@ -115,6 +119,8 @@ export default function FAQ() {
               question={faq.question}
               answer={faq.answer}
               index={i}
+              isOpen={openIndex === i}
+              onToggle={() => setOpenIndex(openIndex === i ? null : i)}
             />
           ))}
         </div>
