@@ -36,6 +36,9 @@ export default function Hero() {
             >
               How it Works
             </a>
+            <a href="#faq" className="hover:opacity-80 transition-opacity">
+              FAQ
+            </a>
             <a
               href="https://www.instagram.com/lunchdapp/"
               target="_blank"
