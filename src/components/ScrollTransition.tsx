@@ -65,7 +65,7 @@ export default function ScrollTransition() {
 
               <motion.a
                 href="#cta"
-                className="hidden lg:inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-4 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md mx-auto lg:mx-0 group"
+                className="hidden lg:inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-3 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md mx-auto lg:mx-0 group"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -117,7 +117,7 @@ export default function ScrollTransition() {
             {/* Mobile CTA */}
             <motion.a
               href="#cta"
-              className="lg:hidden inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-4 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md group"
+              className="lg:hidden inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-3 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md group"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >

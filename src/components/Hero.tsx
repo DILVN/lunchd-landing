@@ -26,7 +26,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Logo className="w-24 md:w-32" />
-          <div className="hidden md:flex items-center gap-8 text-white font-semibold text-base">
+          <div className="hidden md:flex items-center gap-8 text-white font-semibold text-lg">
             <a href="#about" className="hover:opacity-80 transition-opacity">
               About
             </a>
@@ -80,20 +80,11 @@ export default function Hero() {
             >
               New friends <em className="italic">through</em> lunch
             </motion.h1>
-
-            <motion.p
-              className="text-white font-medium text-lg md:text-xl lg:text-2xl max-w-xl leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              One hour. One stranger. One table. That&apos;s all it takes.
-            </motion.p>
           </div>
 
           <motion.a
             href="#cta"
-            className="inline-flex items-center justify-center gap-3 bg-brand hover:bg-brand-hover text-white font-semibold text-base md:text-lg px-8 md:px-10 py-3.5 md:py-4 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md group"
+            className="inline-flex items-center justify-center gap-3 bg-brand hover:bg-brand-hover text-white font-semibold text-base md:text-lg px-8 md:px-10 py-2.5 md:py-3 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md group"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.9 }}
