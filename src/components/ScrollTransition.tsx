@@ -51,7 +51,7 @@ export default function ScrollTransition() {
               <div className="relative">
                 <motion.h2
                   style={{ opacity: firstOpacity }}
-                  className="font-serif text-espresso text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-center lg:text-left max-w-2xl"
+                  className="font-serif text-espresso text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-center lg:text-left max-w-2xl"
                 >
                   <span className="text-brand">250 lunches a year</span> and you eat most of them <em className="italic">alone.</em>
                 </motion.h2>
@@ -63,15 +63,25 @@ export default function ScrollTransition() {
                 </motion.h2>
               </div>
 
-              <a
+              <motion.a
                 href="#cta"
-                className="hidden lg:inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-4 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md mx-auto lg:mx-0"
+                className="hidden lg:inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-4 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md mx-auto lg:mx-0 group"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
               >
                 Get early access
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  className="group-hover:translate-x-1 transition-transform duration-300"
+                >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </motion.a>
             </div>
 
             {/* Image */}
@@ -105,15 +115,25 @@ export default function ScrollTransition() {
             </div>
 
             {/* Mobile CTA */}
-            <a
+            <motion.a
               href="#cta"
-              className="lg:hidden inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-4 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md"
+              className="lg:hidden inline-flex items-center gap-3 bg-espresso hover:bg-espresso/90 text-white font-semibold text-base px-8 py-4 rounded-full w-fit transition-all duration-300 shadow-sm hover:shadow-md group"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
             >
               Get early access
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                className="group-hover:translate-x-1 transition-transform duration-300"
+              >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

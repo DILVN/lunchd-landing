@@ -58,11 +58,22 @@ export default function FinalCTA() {
               />
               <motion.button
                 type="submit"
-                className="bg-brand hover:bg-brand-hover text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap shadow-sm hover:shadow-md"
+                className="bg-brand hover:bg-brand-hover text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap shadow-sm hover:shadow-md inline-flex items-center gap-3 group"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 Save my spot
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  className="group-hover:translate-x-1 transition-transform duration-300"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </motion.button>
             </>
           )}
