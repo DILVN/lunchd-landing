@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const steps = [
@@ -165,6 +166,15 @@ function ShowUpCard() {
 }
 
 export default function HowItWorks() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
+
   return (
     <section
       id="how-it-works"
@@ -195,7 +205,7 @@ export default function HowItWorks() {
               viewport={{ once: true, margin: "-20%" }}
               transition={{
                 duration: 0.6,
-                delay: window.innerWidth >= 1024 ? i * 0.15 : 0
+                delay: isDesktop ? i * 0.15 : 0
               }}
             >
               {/* Card illustration */}
