@@ -192,8 +192,11 @@ export default function HowItWorks() {
               className="flex flex-col gap-6 group"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
+              viewport={{ once: true, margin: "-20%" }}
+              transition={{
+                duration: 0.6,
+                delay: window.innerWidth >= 1024 ? i * 0.15 : 0
+              }}
             >
               {/* Card illustration */}
               <div className="relative w-full aspect-[4/3] bg-card-bg rounded-[2rem] border border-card-border overflow-hidden flex items-center justify-center p-6 transition-all duration-300 group-hover:shadow-lg group-hover:border-[#d6d3cb]">
