@@ -1,11 +1,19 @@
 "use client";
 
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function ScrollTransition() {
   const ref = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -19,9 +27,19 @@ export default function ScrollTransition() {
     restDelta: 0.001,
   });
 
-  // Transform scroll progress to opacity values
-  const firstOpacity = useTransform(smoothProgress, [0, 0.4, 0.5], [1, 1, 0]);
-  const secondOpacity = useTransform(smoothProgress, [0.5, 0.6, 1], [0, 1, 1]);
+  // Adjust transition timing based on screen size
+  // Mobile: transition happens earlier (0.3-0.45) for shorter scroll distance
+  // Desktop: transition happens later (0.4-0.6) for more dramatic effect
+  const firstOpacity = useTransform(
+    smoothProgress,
+    isMobile ? [0, 0.3, 0.45] : [0, 0.4, 0.5],
+    [1, 1, 0]
+  );
+  const secondOpacity = useTransform(
+    smoothProgress,
+    isMobile ? [0.45, 0.55, 1] : [0.5, 0.6, 1],
+    [0, 1, 1]
+  );
 
   return (
     <div ref={ref} className="relative h-[200vh]" id="about">
