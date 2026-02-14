@@ -75,8 +75,8 @@ function JoinTableCard() {
           </svg>
         </div>
         <div>
-          <h3 className="font-semibold text-sm">Friday Feast</h3>
-          <p className="text-xs text-gray-500">4 spots left</p>
+          <h3 className="font-bold text-sm">Friday Feast</h3>
+          <p className="text-xs text-gray-500 font-medium">4 spots left</p>
         </div>
       </div>
       <div className="flex -space-x-2">
@@ -94,7 +94,7 @@ function JoinTableCard() {
           +2
         </div>
       </div>
-      <button className="w-full py-2.5 bg-[#2D2D2D] text-white rounded-xl text-xs font-medium flex items-center justify-center gap-2 group-hover:bg-brand transition-colors duration-300">
+      <button className="w-full py-2.5 bg-[#2D2D2D] text-white rounded-xl text-xs font-semibold flex items-center justify-center gap-2 group-hover:bg-brand transition-colors duration-300">
         <span>Join Table</span>
         <svg
           width="14"
